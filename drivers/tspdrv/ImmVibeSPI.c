@@ -774,7 +774,7 @@ static ssize_t pwmvalue_store(struct device *dev,
 {
 	int vs = 0;
         sscanf(buf, "%d ",&vs);
-        if (vs < 0 || vs > 127) vs = 100;
+        if (vs < 0 || vs > 127) vs = 63;
 	vibe_strength = vs;
         return count;
 }
